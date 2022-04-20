@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: imagemagick
+  labels:
+    app: imagemagick
+spec:
+  containers:
+  - image: robinhoodis/imagemagick:latest
+    command:
+      - "sleep"
+      - "604800"
+    imagePullPolicy: Always
+    name: imagemagick
+  restartPolicy: Always
