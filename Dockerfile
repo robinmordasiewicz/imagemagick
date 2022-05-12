@@ -59,10 +59,11 @@ RUN apt -y update && \
     apt -y update && \
     apt-get -y update && \
     echo "ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true" | debconf-set-selections && \
-    apt -y install ttf-mscorefonts-installer fontconfig && \
-    fc-cache -vr && \
-    fc-match Arial && \
-    fc-match TimesNewRoman && \
-    fc-match Arial-Narrow-Bold \
+    apt -y install ttf-mscorefonts-installer fontconfig
+
+COPY 'Arial Narrow.ttf' /usr/share/fonts/truetype/msttcorefonts/
+COPY 'Arial Narrow Bold.ttf' /usr/share/fonts/truetype/msttcorefonts/
+
+RUN fc-cache -vr
 
 ENTRYPOINT ["convert"]
