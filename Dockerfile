@@ -57,6 +57,7 @@ RUN apt-get -y update && \
     add-apt-repository multiverse && \
     apt -y update && \
     echo "ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true" | debconf-set-selections && \
-    apt -y install ttf-mscorefonts-installer fontconfig
+    apt -y install ttf-mscorefonts-installer fontconfig && \
+    fc-cache -vr
 
 ENTRYPOINT ["convert"]
