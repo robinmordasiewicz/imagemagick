@@ -50,7 +50,10 @@ RUN apt-get -y update && \
     ldconfig /usr/local/lib && \
     apt-get remove --autoremove --purge -y gcc make cmake curl g++ yasm git autoconf pkg-config libpng-dev libjpeg-turbo8-dev libde265-dev libx265-dev libxml2-dev libtiff-dev libfontconfig1-dev libfreetype6-dev liblcms2-dev libsdl1.2-dev libgif-dev && \
     rm -rf /var/lib/apt/lists/* && \
-    rm -rf /ImageMagick && \
+    rm -rf /ImageMagick
+
+RUN add-apt-repository multiverse && \
+    apt update && \
     echo "ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true" | debconf-set-selections && \
     apt -y install ttf-mscorefonts-installer fontconfig
 
