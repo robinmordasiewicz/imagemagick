@@ -52,10 +52,10 @@ RUN apt-get -y update && \
     rm -rf /var/lib/apt/lists/* && \
     rm -rf /ImageMagick
 
-RUN apt-get update && \
-    apt-get install software-properties-common && \
+RUN apt-get -y update && \
+    apt-get -y install software-properties-common && \
     add-apt-repository multiverse && \
-    apt update && \
+    apt -y update && \
     echo "ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true" | debconf-set-selections && \
     apt -y install ttf-mscorefonts-installer fontconfig
 
