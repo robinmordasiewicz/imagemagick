@@ -62,6 +62,7 @@ RUN apt -y update && \
     apt -y install ttf-mscorefonts-installer fontconfig && \
     fc-cache -vr && \
     fc-match Arial && \
-    fc-match TimesNewRoman
+    fc-match TimesNewRoman && \
+    fc-match Arial-Narrow-Bold \
 
 ENTRYPOINT ["convert"]
