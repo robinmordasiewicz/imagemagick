@@ -20,7 +20,6 @@ RUN touch /home/ubuntu/.hushlogin
 RUN chown -R ubuntu:ubuntu /home/ubuntu
 USER ubuntu:ubuntu
 WORKDIR /home/ubuntu
-ENV XDG_RUNTIME_DIR=/home/ubuntu/
 
 RUN wget -q -O - https://gist.githubusercontent.com/Blastoise/72e10b8af5ca359772ee64b6dba33c91/raw/2d7ab3caa27faa61beca9fbf7d3aca6ce9a25916/clearType.sh | bash && \
     wget -q -O - https://gist.githubusercontent.com/Blastoise/b74e06f739610c4a867cf94b27637a56/raw/96926e732a38d3da860624114990121d71c08ea1/tahoma.sh | bash && \
