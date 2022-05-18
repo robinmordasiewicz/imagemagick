@@ -6,7 +6,7 @@ metadata:
     app: imagemagick
 spec:
   containers:
-  - image: robinhoodis/imagemagick:0.1.2
+  - image: robinhoodis/imagemagick:0.1.3
     command:
       - "sleep"
       - "604800"

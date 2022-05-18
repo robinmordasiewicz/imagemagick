@@ -1,7 +1,7 @@
 FROM dpokidov/imagemagick:latest-ubuntu
 
 RUN apt-get -y update && \
-    apt-get -y install software-properties-common wget curl sudo && \
+    apt-get -y install software-properties-common wget curl && \
     add-apt-repository multiverse && \
     apt-get -y update && \
     echo "ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true" | debconf-set-selections && \
