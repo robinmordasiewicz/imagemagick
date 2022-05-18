@@ -5,7 +5,7 @@ RUN apt-get -y update && \
     add-apt-repository multiverse && \
     apt-get -y update && \
     echo "ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true" | debconf-set-selections && \
-    apt -y install ttf-mscorefonts-installer fontconfig
+    apt-get -y install ttf-mscorefonts-installer fontconfig
 
 COPY Arial_Narrow.ttf /usr/share/fonts/truetype/msttcorefonts/
 COPY Arial_Narrow_Bold.ttf /usr/share/fonts/truetype/msttcorefonts/
