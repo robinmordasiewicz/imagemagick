@@ -27,4 +27,3 @@ RUN wget -q -O - https://gist.githubusercontent.com/Blastoise/72e10b8af5ca359772
     wget -q -O - https://gist.githubusercontent.com/Blastoise/64ba4acc55047a53b680c1b3072dd985/raw/6bdf69384da4783cc6dafcb51d281cb3ddcb7ca0/segoeUI.sh | bash && \
     wget -q -O - https://gist.githubusercontent.com/Blastoise/d959d3196fb3937b36969013d96740e0/raw/429d8882b7c34e5dbd7b9cbc9d0079de5bd9e3aa/otherFonts.sh | bash
 
-RUN sudo -S fc-cache -vr
