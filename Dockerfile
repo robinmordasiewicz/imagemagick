@@ -10,8 +10,7 @@ RUN apt-get -y update && \
 #COPY Arial_Narrow.ttf /usr/share/fonts/truetype/msttcorefonts/
 #COPY Arial_Narrow_Bold.ttf /usr/share/fonts/truetype/msttcorefonts/
 
-
-ENTRYPOINT ["convert"]
+#ENTRYPOINT ["convert"]
 
 RUN groupadd -g 1000 ubuntu
 RUN useradd -rm -d /home/ubuntu -s /bin/bash -g 1000 -G sudo -u 1000 ubuntu
