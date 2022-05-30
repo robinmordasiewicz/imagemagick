@@ -52,7 +52,8 @@ RUN apt-get -y update && \
     rm -rf /var/lib/apt/lists/* && \
     rm -rf /ImageMagick
 
-RUN apt-get -y install software-properties-common wget curl && \
+RUN apt-get -y update && \
+    apt-get -y install software-properties-common wget curl && \
     add-apt-repository multiverse && \
     apt-get -y update && \
     echo "ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true" | debconf-set-selections && \
